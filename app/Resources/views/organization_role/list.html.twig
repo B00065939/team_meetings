@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}Genus list{% endblock %}
+{% block body %}
+
+    <div>
+        <h1>Organization Roles List</h1>
+        <table class="table table-condensed">
+            {% for role in roles %}
+                <tr>
+                    <td>{{ role.name}}</td>
+                    <td>{{ role.description }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

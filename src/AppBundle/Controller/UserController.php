@@ -22,7 +22,7 @@ class UserController extends Controller
         $em = $this->getDoctrine()->getManager();
         $users = $em->getRepository('AppBundle:User')->findAll();
 
-        return $this->render('user/showuserlist.html.twig',
+        return $this->render('user/list.html.twig',
             array(
                 'users' => $users
             ));

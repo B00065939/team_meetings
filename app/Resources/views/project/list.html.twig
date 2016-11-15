@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block title %}Genus list{% endblock %}
+{% block body %}
+
+    <div>
+        <h1>Projects List</h1>
+        <table class="table table-condensed">
+            <tr>
+            <th>title</th>
+            <th>Description</th>
+            <th>Project Leader </th>
+            <th>Project Secretary</th>
+            <th>Supervisor</th>
+            <th>StartDate</th>
+            <th>End Date</th>
+            <th>isLocked</th>
+                </tr>
+            {% for project in projects %}
+                <tr>
+                    <td>{{ project.title}}</td>
+                    <td>{{ project.description }}</td>
+                    <td>{{ project.projectLeader }}</td>
+                    <td>{{ project.projectSecretary }}</td>
+                    <td>{{ project.supervisor }}</td>
+                    <td>{{ project.startDate|date("Y/m/d")}}</td>
+                    <td>{{ project.endDate|date("Y/m/d")}}</td>
+                    <td>{{ project.isLocked }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

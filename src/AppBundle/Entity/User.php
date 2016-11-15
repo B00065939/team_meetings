@@ -48,6 +48,18 @@ class User
      */
     private $lastName;
 
+    ////
+    ///
+    ///
+    public function __toString()
+    {
+        return $this->firstName ." ". $this->lastName ." (". $this->login.")";
+    }
+
+    ///
+    ///
+    ///
+
     /**
      * @return mixed
      */

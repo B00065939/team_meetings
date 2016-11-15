@@ -3,13 +3,12 @@
 {% block body %}
 
     <div>
-        <table class="table">
+        <h1>Project Roles List</h1>
+        <table class="table table-condensed">
             {% for role in roles %}
                 <tr>
                     <td>{{ role.name}}</td>
                     <td>{{ role.description }}</td>
-
-                    <td><a href="{{ path('user', {'userId': user.id}) }}">{{ user.login }}</a></td>
                 </tr>
             {% endfor %}
         </table>

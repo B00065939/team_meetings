@@ -30,9 +30,10 @@ class Project
     private $title;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $supervizor;
+    private $supervisor;
 
     /**
      * @ORM\Column(type="string")
@@ -40,22 +41,24 @@ class Project
     private $description;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $projectLeader;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $projectSecretary;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="datetime")
      */
     private $startDate;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="datetime")
      */
     private $endDate;
 
@@ -99,17 +102,17 @@ class Project
     /**
      * @return mixed
      */
-    public function getSupervizor()
+    public function getSupervisor()
     {
-        return $this->supervizor;
+        return $this->supervisor;
     }
 
     /**
-     * @param mixed $supervizor
+     * @param mixed $supervisor
      */
-    public function setSupervizor($supervizor)
+    public function setSupervisor($supervisor)
     {
-        $this->supervizor = $supervizor;
+        $this->supervisor = $supervisor;
     }
 
     /**

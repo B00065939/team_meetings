@@ -35,12 +35,12 @@ AppBundle\Entity\OrganizationRole:
 AppBundle\Entity\Project:
   project_{1..10}:
     title: <text(10)>
-    supervizor: <numberBetween(1, 10)>
+    supervisor: '@user_<numberBetween(1, 10)>'
     description: <paragraph()>
-    projectLeader: <numberBetween(1, 10)>
-    projectSecretary: <numberBetween(1, 10)>
-    startDate: <date()>
-    endDate: <date()>
+    projectLeader: '@user_<numberBetween(1, 10)>'
+    projectSecretary: '@user_<numberBetween(1, 10)>'
+    startDate: <dateTimeBetween('-6 months', 'now')>
+    endDate: <dateTimeBetween('2 months', '8 months')>
     isLocked: <boolean(15)>
 
 AppBundle\Entity\ProjectRole:

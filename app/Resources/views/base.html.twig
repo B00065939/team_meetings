@@ -15,9 +15,14 @@
          <header class="header">
             <ul class="navi">
 
+                <li><a href="{{ path('userlist') }}">Users</a></li>
                 <li><a href="{{ path('newuser') }}">New User</a></li>
-                <li><a href="{{ path('userlist') }}">Show useres</a></li>
-                <li><a href="#">New Organization Role</a></li>
+                <li><a href="{{ path('organization_role_list') }}">Organization Roles</a></li>
+                <li><a href="{{ path('new_organization_role') }}">New Organization Role</a></li>
+                <li><a href="{{ path('project_role_list') }}">Project Roles</a></li>
+                <li><a href="{{ path('new_project_role') }}">New Project Role</a></li>
+                <li><a href="{{ path('project_list') }}">Projects</a></li>
+                <li><a href="{{ path('new_project') }}">New Project</a></li>
 
             </ul>
         </header>

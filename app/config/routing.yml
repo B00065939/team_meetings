@@ -14,3 +14,23 @@ user:
 newuser:
     path: /newuser
     defaults: {_controller: AppBundle:User:newUser}
+organization_role_list:
+        path: /organizationroles
+        defaults: {_controller: AppBundle:OrganizationRole:list}
+new_organization_role:
+        path: /neworgaizationrole
+        defaults: {_controller: AppBundle:OrganizationRole:new}
+
+project_role_list:
+        path: /projectroles
+        defaults: {_controller: AppBundle:ProjectRole:list}
+new_project_role:
+        path: /newprojectrole
+        defaults: {_controller: AppBundle:ProjectRole:new}
+
+project_list:
+        path: /projects
+        defaults: {_controller: AppBundle:Project:list}
+new_project:
+        path: /newproject
+        defaults: {_controller: AppBundle:Project:new}
