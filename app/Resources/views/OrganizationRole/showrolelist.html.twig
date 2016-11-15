@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}Genus list{% endblock %}
+{% block body %}
+
+    <div>
+        <table class="table">
+            {% for role in roles %}
+                <tr>
+                    <td>{{ role.name}}</td>
+                    <td>{{ role.description }}</td>
+
+                    <td><a href="{{ path('user', {'userId': user.id}) }}">{{ user.login }}</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: 3306
+    database_name: team_meetings
+    database_user: meetingadmin
+    database_password: password
+    secret: pass

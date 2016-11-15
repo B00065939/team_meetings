@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}Genus list{% endblock %}
+{% block body %}
+
+    <div>
+        <ul>
+            <li>LOGIN: {{ user.login }}</li>
+            <li>First Name: {{ user.firstName }}</li>
+            <li>Last Name: {{ user.lastName }}</li>
+            <li>Email: {{ user.email }}</li>
+        </ul>
+    </div>
+
+{% endblock %}

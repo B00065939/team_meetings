@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}Genus list{% endblock %}
+{% block body %}
+
+    <div class="sea-creature-container">
+        <table class="table table-striped">
+            {% for genus in genueses %}
+                <tr>
+                    <td>{{ genus.name }}</td>
+                    <td><a href="{{ path('genus_show', {'genusName': genus.name}) }}">{{ genus.name }}</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

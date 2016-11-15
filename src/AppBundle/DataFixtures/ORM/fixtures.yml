@@ -1,0 +1,49 @@
+AppBundle\Entity\SubFamily:
+  subfamily_{1..10}:
+    name: <lastName()>
+
+AppBundle\Entity\Genus:
+    genus_{1..10}:
+        name: <genus()>
+        subFamily: '@subfamily_<numberBetween(1,10)>'
+        speciesCount: <numberBetween(100, 100000)>
+        funFact: <sentence()>
+        isPublished: <boolean(75)>
+        firstDiscoveredAt: <dateTimeBetween('-6 years', '-6 months')>
+
+AppBundle\Entity\GenusNote:
+  genus_note_{1..100}:
+    username: <username()>
+    userAvatarFilename: '50%? dog.jpeg : cat.jpeg'
+    note: <paragraph()>
+    createAt: <dateTimeBetween('-6 months', 'now')>
+    genus: '@genus_<numberBetween(1, 10)>'
+
+AppBundle\Entity\User:
+    user_{1..10}:
+        login: <username()>
+        email: <email()>
+        firstName: <firstName()>
+        lastName: <lastName()>
+        password: <text(8)>
+
+AppBundle\Entity\OrganizationRole:
+  role_{1..10}:
+    name: <roleName()>
+    description: <paragraph()>
+
+AppBundle\Entity\Project:
+  project_{1..10}:
+    title: <text(10)>
+    supervizor: <numberBetween(1, 10)>
+    description: <paragraph()>
+    projectLeader: <numberBetween(1, 10)>
+    projectSecretary: <numberBetween(1, 10)>
+    startDate: <date()>
+    endDate: <date()>
+    isLocked: <boolean(15)>
+
+AppBundle\Entity\ProjectRole:
+  projectRole_{1..10}:
+    name: <projectRoleName()>
+    description: <paragraph()>
