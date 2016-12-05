@@ -7,7 +7,7 @@ homepage:
         _controller: AppBundle:Main:homepage
 userlist:
     path: /users
-    defaults: { _controller : AppBundle:User:list }
+    defaults: { _controller : AppBundle:User:list}
 user:
     path: /user/{userId}
     defaults: {_controller: AppBundle:User:user}

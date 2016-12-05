@@ -13,7 +13,7 @@ Flexbox Layout
 
 .navi {
     flex: 1;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .main-content {
@@ -103,6 +103,7 @@ body {
 }
 
 .navi li a:hover {
+    background: rgba(200, 200, 200, .5);
     color: #000;
 }
 
@@ -124,7 +125,7 @@ transition: 200ms ease-in-out;
 padding: 8px 16px 7px;
 }
 
-.navi li:last-child a:hover {
+.navi li a:hover {
     background: rgba(200, 200, 200, .5);
     color: #000;
 }

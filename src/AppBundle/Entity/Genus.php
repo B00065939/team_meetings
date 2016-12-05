@@ -8,6 +8,7 @@
 
 namespace AppBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -33,6 +34,7 @@ class Genus
 
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank()
      */
     private $name;
 
@@ -44,6 +46,8 @@ class Genus
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank()
+     * @Assert\Range(min=0, minMessage="Negative species! Come on...")
      */
     private $speciesCount;
 
@@ -174,7 +178,7 @@ class Genus
      */
     public function getFunFact()
     {
-        return '**TEST** ' . $this->funFact;
+        return $this->funFact;
     }
 
     /**
